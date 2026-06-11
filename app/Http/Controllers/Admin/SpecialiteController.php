@@ -91,7 +91,7 @@ class SpecialiteController extends Controller
                          ->with('success', 'Spécialité supprimée avec succès.');
     }
 
-    // Afficher détails (non utilisé mais requis par resource)
+    // Afficher détails
     public function show($id)
     {
         $specialite = Specialite::with('medecins.user')->findOrFail($id);
