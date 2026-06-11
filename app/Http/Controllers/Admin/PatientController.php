@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class PatientController extends Controller
 {
-    // Liste des patients ayant eu des consultations
     public function index(Request $request)
     {
         $query = Patient::with('user')
