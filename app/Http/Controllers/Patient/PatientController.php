@@ -17,9 +17,7 @@ use Illuminate\Support\Facades\Http;
 
 class PatientController extends Controller
 {
-    // ─────────────────────────────────────────────
-    // DASHBOARD — inchangé (ton ancien code)
-    // ─────────────────────────────────────────────
+    // DASHBOARD — inchangé 
     public function dashboard()
     {
         $patient = Patient::where('user_id', session('user_id'))->first();
