@@ -35,7 +35,6 @@ class AdminController extends Controller
             ->take(5)
             ->get();
 
-        // Fix : withCount avec date correcte et statuts actifs
         $medecins = Medecin::with(['user', 'specialite'])
             ->withCount(['rendezVous as rdv_aujourdhui' => function ($q) {
                 $q->where('date_rendez_vous', now()->toDateString())
