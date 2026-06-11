@@ -31,7 +31,7 @@ class PatientController extends Controller
         return view('medecin.patients.index', compact('patients'));
     }
 
-    // Afficher détails d'un patient (non utilisé mais requis par resource)
+    // Afficher détails d'un patient
     public function show($id)
     {
         return $this->dossier($id);
